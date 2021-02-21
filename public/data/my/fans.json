@@ -1,0 +1,17 @@
+{
+    "fans": [{
+        "name": "逆风如解意",
+        "img": "headPortrait.jpg",
+        "Mobile": "12596362459",
+        "registered": "注册时间 2019-05-25 15:22",
+        "open": "开通会员 2019-05-25 15:22",
+        "status": "会员"
+    }],
+    "friend": [{
+        "name": "逆风如解意",
+        "img": "headPortrait.jpg",
+        "Mobile": "12596362459",
+        "registered": "注册时间 2019-05-25 15:22",
+        "status": ""
+    }]
+}

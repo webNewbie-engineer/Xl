@@ -1,0 +1,91 @@
+{
+    "data": {
+        "index": [0, 1],
+        "title": [{
+            "name": "好券广场",
+            "color": "#333"
+        }, {
+            "name": "狂欢节礼包",
+            "color": "#FF1818"
+        }],
+        "square": [{
+            "id": "01",
+            "title": "SPA按摩 90分钟舒缓经络",
+            "img": "SignsMr.jpg",
+            "locationCoten": "万达广场",
+            "name": "栩贝",
+            "money": "￥59",
+            "storePrice": "门店价￥198",
+            "sold": "已售:5963",
+            "profit": "邀请赚￥6.5",
+            "earnings": "收益11%",
+            "share": "分享赚￥14.36",
+            "purchase": "自购省￥14.36",
+            "items": [{
+                "title": "使用次数",
+                "content": [
+                    "2次"
+                ]
+            }, {
+                "title": "有效期",
+                "content": [
+                    "2019-07-11至2019-08-27"
+                ]
+            }, {
+                "title": "注意事项",
+                "content": [
+                    "1、助力成功即可到店凭手机端卡券二维码兑换价值 118元头部保养，需在消费前出示二维码供商家验证， 不可使用截图; ",
+                    "2、活动不兑现，不找零，不开具发票;不与店内其他 优惠同享;",
+                    "3、需在卡券指定日期前使用，过期作废; ",
+                    " 4、图片仅供参考，活动解释权归本店所有。"
+                ]
+            }],
+            "introduce": {
+                "introducenum": "14.36",
+                "proportion": "14%",
+                "matter": "2次",
+                "particularstitle": "单人养生泰式按摩",
+                "rulingPrice": "198.00",
+                "originalCost": "￥518.00",
+                "img": "project.png"
+            },
+            "merchant": {
+                "name": "雅瑜养生会所",
+                "site": "雨花区沙湾路与曲塘路交叉路口天湘华",
+                "distance": "560m",
+                "img": "goodsmg.png",
+                "id": "001"
+            },
+            "particulars": {
+                "content": "古代称推拿为按摩、按乔，是中国起源很早的一种的养生术.推拿法的理论依据是以脏腑经络学说为指导的。经络是人体内经脉和络脉的总称。 是气血运行的通路它们在人体内彼此紧密相连,使人保持一个健康状态 ",
+                "img": "project.png"
+            },
+            "poster": {
+                "title": "SPA按摩 90分钟舒缓经络",
+                "name": "雅瑜养生会所",
+                "headPortrait": "goodsmg.png",
+                "commodity": "project1.png",
+                "price": "100",
+                "originalPrice": "118",
+                "referrer": "逆风如解",
+                "display": false
+            }
+        }],
+        "giftBag": [{
+            "id": "01",
+            "money": "180",
+            "earnings": "21.60",
+            "proportion": "12%",
+            "img": "giftBag.png",
+            "a": "carnival"
+        }, {
+            "id": "02",
+            "money": "180",
+            "earnings": "21.60",
+            "proportion": "12%",
+            "img": "giftBag.png",
+            "a": "carnival"
+        }],
+        "num": 5
+    }
+}

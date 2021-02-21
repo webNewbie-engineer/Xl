@@ -1,0 +1,19 @@
+{
+    "data": [{
+        "iconfont": "&#xe679;",
+        "name": "邀请店",
+        "srcs": "index"
+    }, {
+        "iconfont": "&#xe602;",
+        "name": "分享券",
+        "srcs": "share"
+    }, {
+        "iconfont": "&#xe68a;",
+        "name": "推广明细",
+        "srcs": "promotion"
+    }, {
+        "iconfont": "&#xe62f;",
+        "name": "我的",
+        "srcs": "my"
+    }]
+}

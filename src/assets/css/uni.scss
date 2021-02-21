@@ -1,0 +1,139 @@
+@mixin WH($a:100px, $b:100px) {
+  width: $a;
+  height: $b;
+}
+
+// 默认字体大小及颜色
+@mixin fzc($size: 28upx, $color: #333) {
+  font-size: $size;
+  color: $color;
+}
+
+// 单行flex布局
+@mixin flexLine {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  flex-wrap: nowrap;
+}
+
+// 单行多行省略
+@mixin ellipsis($num: null) {
+  @if $num {
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: $num;
+    overflow: hidden;
+  }
+
+  @else {
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+  }
+}
+
+//普通按钮 宽 背景 高 字体颜色 字体大小 对外左边距 圆角 边框颜色
+@mixin btn($width: 702upx, $background: #FF5D20, $line_height: 97upx, $color: #fff, $font_size:36upx, $marleft:0upx, $bordR:48upx, $border: transparent) {
+  width: $width;
+  line-height: $line-height;
+  border: 1upx solid $color;
+  background: $background;
+  color: $color;
+  font-size: $font_size;
+  border: 1upx solid $border;
+  text-align: center;
+  border-radius: $bordR;
+  margin-left: $marleft;
+}
+
+//线型箭头 -- $rotate可以旋转改变方向
+@mixin deltaLine($size: 14upx, $rotate: -45deg, $color:#999999) {
+  width: $size;
+  height: $size;
+  border: 1upx solid $color;
+  border-top: transparent;
+  border-left: transparent;
+  transform: rotate($rotate);
+}
+
+// 点/小圆
+@mixin drop($size: 8upx, $background:#C1C1C1) {
+  width: $size;
+  height: $size;
+  border-radius: 50%;
+  background: $background;
+}
+
+/* 关闭按钮 */
+@mixin close($size:30rpx, $weight:1.5px, $color:#c1c1c1) {
+  width: $size;
+  height: $size;
+  position: absolute;
+
+  &::before {
+    content: "";
+    width: 100%;
+    height: $weight;
+    background: $color;
+    position: absolute;
+    top: 50%;
+    left: 0;
+    transform: translateY(-50%) rotate(45deg);
+  }
+
+  &::after {
+    @extend ::before;
+    transform: translateY(-50%) rotate(-45deg);
+  }
+}
+
+// 加号 尺寸，粗细，颜色
+@mixin add($size, $weight:1.5px, $color:#c1c1c1) {
+  width: $size;
+  height: $size;
+  position: absolute;
+
+  &::before {
+    content: "";
+    width: 100%;
+    height: $weight;
+    background: $color;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+  }
+
+  &::after {
+    @extend ::before;
+    transform: translateY(-50%) rotate(90deg);
+  }
+}
+
+/* 三角箭头(非实心)  */
+@mixin arrow($size, $color:#999, $direction: right) {
+  display: inline-block;
+  width: $size;
+  height: $size;
+  $deg: -45deg;
+
+  border: 1px solid $color {
+    left: 0;
+    top: 0;
+  }
+
+  @if $direction=="bottom" {
+    $deg: 45deg
+  }
+
+  @else if $direction=="left" {
+    $deg: 135deg
+  }
+
+  @else if $direction=="top" {
+    $deg: 225deg
+  }
+
+  transition: .4s;
+  transform: rotate($deg);
+}

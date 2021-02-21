@@ -1,0 +1,14 @@
+{
+    "data": {
+        "length": "24px",
+        "content": [{
+            "headline": "精选",
+            "handClick":true,
+            "genreContent": ["全部", "美容美发", "科美医美", "母婴亲子", "休闲娱乐","科闲","亲子美发"]
+        }, {
+            "headline": "附近",
+            "handClick":false,
+            "genreContent": ["全部", "科美医美", "休闲娱乐"]
+        }]
+    }
+}

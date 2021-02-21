@@ -1,0 +1,244 @@
+@mixin WH($a:100px, $b:0, $c:0, $d:0) {
+    width: $a;
+    height: $b;
+    padding: $c;
+    margin: $d;
+}
+
+@mixin WMP($a:100%, $c:0, $d:0) {
+    width: $a;
+    padding: $c;
+    margin: $d;
+}
+
+// 默认字体大小及颜色
+@mixin fzc($size: 28upx, $color: #333) {
+    font-size: $size;
+    color: $color;
+}
+
+// 默认字体大小及颜色行高
+@mixin fzch($size: 28upx, $color: #333, $c:1) {
+    font-size: $size;
+    color: $color;
+    line-height: $c;
+}
+
+// 默认宽字体大小及颜色
+@mixin WfzchFa($a:0, $size: 28upx, $color: #fff, $c:1, $d:PingFang-SC-Medium) {
+    width: $a;
+    font-size: $size;
+    color: $color;
+    line-height: $c;
+    text-align: center;
+    font-family: $d;
+}
+
+// 默认字体大小及颜色行高居中
+@mixin fzchFa($size: 28upx, $color: #333, $c:1, $d:PingFang-SC-Medium) {
+    font-size: $size;
+    color: $color;
+    line-height: $c;
+    text-align: center;
+    font-family: $d;
+}
+
+//多行flex布局
+@mixin DF($a:20%) {
+    display: flex;
+    width: 100%;
+    flex-wrap: wrap;
+    div {
+        width: $a;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+}
+
+@mixin DFli($a:20%) {
+    display: flex;
+    width: 100%;
+    flex-wrap: wrap;
+    li {
+        width: $a;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+}
+
+@mixin DFFlex1 {
+    display: flex;
+    div {
+        flex: 1;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+    }
+}
+
+//定位
+@mixin ptl($a, $b) {
+    position: absolute;
+    top: $a;
+    left: $b;
+}
+
+@mixin ptr($a, $b) {
+    position: absolute;
+    top: $a;
+    right: $b;
+}
+
+@mixin pbl($a, $b) {
+    position: absolute;
+    bottom: $a;
+    left: $b;
+}
+
+@mixin pbr($a, $b) {
+    position: absolute;
+    bottom: $a;
+    right: $b;
+}
+
+// 单行flex布局
+@mixin flexLine {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: nowrap;
+}
+
+//遮盖层
+@mixin CoverLayer {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    z-index: 1000000000000000000000;
+    background: rgba(0, 0, 0, 0.45);
+}
+
+//单行居中省略
+@mixin omit {
+    text-align: center;
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+}
+
+//单行省略
+@mixin omitN0 {
+    text-align: left;
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+}
+
+//单行省略
+@mixin omit {
+    text-align: left;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+// 单行多行省略
+@mixin ellipsis($num: null) {
+    @if $num {
+        display: -webkit-box;
+        -webkit-box-orient: vertical;
+        -webkit-line-clamp: $num;
+        overflow: hidden;
+    }
+    @else {
+        overflow: hidden;
+        white-space: nowrap;
+        text-overflow: ellipsis;
+    }
+}
+
+//input 
+@mixin commoninput($a:0, $b:0, $c:0, $d:0) {
+    width: $a;
+    height: $b;
+    text-align: $c;
+    border-radius: $d;
+    outline: none;
+    box-sizing: border-box;
+}
+
+//普通按钮 高 字体大小 字体颜色 圆角  对内边距 对外上边距  背景
+@mixin commonBtn($line-height:1, $size:16upx, $color:#333, $border:25px, $padding:0, $top:0, $background:#fff) {
+    line-height: $line-height;
+    font-size: $size;
+    color: $color;
+    border-radius: $border;
+    padding: $padding;
+    margin-top: $top;
+    background-color: $background;
+}
+
+//普通按钮 宽 背景 高 字体颜色 字体大小 对外左边距 圆角 边框颜色
+@mixin btn($width: 702upx, $background: #FF5D20, $line_height: 97upx, $color: #fff, $font_size:36upx, $marleft:0upx, $bordR:48upx, $border: transparent) {
+    width: $width;
+    line-height: $line-height;
+    border: 1upx solid $color;
+    background: $background;
+    color: $color;
+    font-size: $font_size;
+    border: 1upx solid $border;
+    text-align: center;
+    border-radius: $bordR;
+    margin-left: $marleft;
+}
+
+//线型箭头 -- $rotate可以旋转改变方向
+@mixin deltaLine($size: 14upx, $rotate: -45deg, $color:#999999) {
+    width: $size;
+    height: $size;
+    border: 1upx solid $color;
+    border-top: transparent;
+    border-left: transparent;
+    transform: rotate($rotate);
+}
+
+// 点/小圆
+@mixin drop($size: 8upx, $background:#C1C1C1) {
+    width: $size;
+    height: $size;
+    border-radius: 50%;
+    background: $background;
+}
+
+
+/* 关闭按钮 */
+
+
+/* 三角箭头(非实心)  */
+
+@mixin arrow($size, $color:#999, $direction: right) {
+    display: inline-block;
+    width: $size;
+    height: $size;
+    $deg: -45deg;
+    border: 1px solid $color {
+        left: 0;
+        top: 0;
+    }
+    @if $direction=="bottom" {
+        $deg: 45deg
+    }
+    @else if $direction=="left" {
+        $deg: 135deg
+    }
+    @else if $direction=="top" {
+        $deg: 225deg
+    }
+    transition: .4s;
+    transform: rotate($deg);
+}
